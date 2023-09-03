@@ -1,24 +1,29 @@
 console.clear();
 
-$("#confirm").click(function () {
-  modalClose();
-  //컨펌 이벤트 처리
-});
 $(".pop-1").click(function () {
-  $(".p-1").css("display", "block").hide().fadeIn();
+  $(".p-1").addClass("active");
+  $(".b-1").addClass("active");
 });
 $(".pop-2").click(function () {
-  $(".p-2").css("display", "block").hide().fadeIn();
+  $(".p-2").addClass("active");
+  $(".b-2").addClass("active");
 });
 $(".pop-3").click(function () {
-  $(".p-3").css("display", "block").hide().fadeIn();
+  $(".p-3").addClass("active");
+  $(".b-3").addClass("active");
 });
 $(".pop-4").click(function () {
-  $(".p-4").css("display", "block").hide().fadeIn();
+  $(".p-4").addClass("active");
+  $(".b-4").addClass("active");
 });
+
 $(".p-close-btn").click(function () {
-  modalClose();
+  $(".p-1").removeClass("active");
+  $(".p-2").removeClass("active");
+  $(".p-3").removeClass("active");
+  $(".p-4").removeClass("active");
+  $(".b-1").removeClass("active");
+  $(".b-2").removeClass("active");
+  $(".b-3").removeClass("active");
+  $(".b-4").removeClass("active");
 });
-function modalClose() {
-  $(".popup-wrap").fadeOut();
-}

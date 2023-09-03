@@ -33,19 +33,49 @@ h1 {
   padding: 15px;
   z-index: 10;
 }
+.b-1,
+.b-2,
+.b-3,
+.b-4 {
+  display: none;
+}
+.b-1.active,
+.b-2.active,
+.b-3.active,
+.b-4.active {
+  display: block;
+}
+@keyframes fadeInUp {
+  0% {
+    transform: translate(-50%, 150px);
+    opacity: 0;
+    transition: 2s all ease;
+  }
+  to {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}
 .p-1,
 .p-2,
 .p-3,
 .p-4 {
   display: none;
 }
+.p-1.active,
+.p-2.active,
+.p-3.active,
+.p-4.active {
+  display: block;
+}
 .popup-wrap > .popups {
   min-width: 200px;
   min-height: 200px;
   position: absolute;
-  top: 7%;
+  top: 6%;
   left: 50%;
   transform: translateX(-50%);
+  animation: fadeInUp 0.5s;
 }
 .popup-wrap > .popups .p-close-btn {
   display: flex;
